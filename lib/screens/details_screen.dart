@@ -29,8 +29,7 @@ class DetailsScreen extends StatelessWidget {
                 child: const Icon(Icons.movie, size: 80, color: Colors.grey),
               ),
             ),
-            
-            // Content container
+            // picture and text content displayed
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -44,8 +43,7 @@ class DetailsScreen extends StatelessWidget {
                         ),
                   ),
                   const SizedBox(height: 16),
-
-                  // Cast Section
+                  // Cast section for showing all the actors and the background for them so its highlighted like on google
                   const Text(
                     'Cast',
                     style: TextStyle(
@@ -67,8 +65,7 @@ class DetailsScreen extends StatelessWidget {
                         .toList(),
                   ),
                   const SizedBox(height: 20),
-
-                  // Synopsis Section
+                  // Synopsis section to show the movie summary in a very clear way. Black wording to be clear behind light background.
                   const Text(
                     'Synopsis',
                     style: TextStyle(
@@ -76,7 +73,7 @@ class DetailsScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 12),
                   Text(
                     movie.synopsis,
                     style: const TextStyle(

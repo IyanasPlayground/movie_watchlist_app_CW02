@@ -1,5 +1,5 @@
 import '../models/movie.dart';
-
+//i added my favorate movies outside of inception
 final List<Movie> sampleMovies = [
   Movie(
     title: 'Inception',

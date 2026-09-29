@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import '../data/movies_data.dart';
 import 'details_screen.dart';
 
+//this helps show the list 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
+//this is the title. i kept it basic and kept the scrolling even tho i have few movies. 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,19 +22,20 @@ class HomeScreen extends StatelessWidget {
             margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
             elevation: 3,
             shape: RoundedRectangleBorder(
+              
               borderRadius: BorderRadius.circular(12),
-            ),
+            ), //Round corners on the movie images for a nice look to the left.
             child: ListTile(
               contentPadding: const EdgeInsets.all(8.0),
               leading: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.asset(
                   movie.posterPath,
-                  width: 60,
+                  width: 90,
                   height: 90,
                   fit: BoxFit.cover,
                   errorBuilder: (context, error, stackTrace) => Container(
-                    width: 60,
+                    width: 90,
                     height: 90,
                     color: Colors.grey[300],
                     child: const Icon(Icons.movie, size: 30),
@@ -44,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                 movie.title,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 16,
                 ),
               ),
               subtitle: Text(
