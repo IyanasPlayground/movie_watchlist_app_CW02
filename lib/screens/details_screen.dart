@@ -61,7 +61,7 @@ class DetailsScreen extends StatelessWidget {
                         .map(
                           (actor) => Chip(
                             label: Text(actor),
-                            backgroundColor: Colors.blue.shade50,
+                            backgroundColor: Colors.purple,
                           ),
                         )
                         .toList(),
